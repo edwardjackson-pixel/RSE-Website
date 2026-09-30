@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+  --color-charcoal: #1a1a1a;
+  --color-accent: #8b7355;
+  --color-accent-light: #a08b6d;
+  --font-heading: "Archivo", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* ── Hero wireframe draw-in animation ── */
+.hero-wireframe-line {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: wireframe-draw 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.hero-wireframe-node {
+  opacity: 0;
+  animation: wireframe-node-appear 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes wireframe-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes wireframe-node-appear {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Hero scene: perspective parallax + 3D tilt ── */
+.hero-scene {
+  --px: 0;
+  --py: 0;
+  --hero-scroll: 0;
+  --depth: 0.5;
+}
+
+.hero-parallax-stage {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.hero-layer {
+  --depth: 0.5;
+  transform: translate3d(
+      calc(var(--px) * var(--depth) * 42px),
+      calc(var(--py) * var(--depth) * 32px + var(--hero-scroll) * var(--depth) * -55px),
+      0
+    )
+    rotateX(calc(var(--py) * var(--depth) * -4deg))
+    rotateY(calc(var(--px) * var(--depth) * 4deg));
+  will-change: transform;
+  transition: transform 120ms linear;
+}
+
+.hero-wireframe-sublayer {
+  transform: translate3d(
+      calc(var(--px) * var(--depth) * 28px),
+      calc(var(--py) * var(--depth) * 20px),
+      0
+    )
+    rotateX(calc(var(--py) * var(--depth) * -2deg))
+    rotateY(calc(var(--px) * var(--depth) * 2deg));
+}
+
+/* ── Wireframe idle float ── */
+@keyframes hero-idle-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+.hero-idle-float-slow {
+  animation: hero-idle-float 10s ease-in-out infinite;
+}
+
+.hero-idle-float-medium {
+  animation: hero-idle-float 8s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.hero-idle-float-fast {
+  animation: hero-idle-float 6s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* ── Kinetic headline reveal ── */
+.hero-line-mask {
+  overflow: hidden;
+}
+
+.hero-line-reveal {
+  transform: translateY(110%);
+  animation: hero-line-slide 0.85s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes hero-line-slide {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ── Hero CTA hover lift ── */
+.hero-cta-primary,
+.hero-cta-secondary {
+  transition:
+    transform 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 250ms cubic-bezier(0.25, 0.1, 0.25, 1),
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+}
+
+.hero-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.hero-cta-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Scroll cue ── */
+.hero-scroll-cue-line {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(168, 162, 158, 0.9) 0%,
+    rgba(168, 162, 158, 0) 100%
+  );
+  animation: hero-scroll-cue-draw 2s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-cue-draw {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0.4;
+  }
+  40% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 0.2;
+  }
+}
+
+/* ── Nav underline slide ── */
+.nav-link-underline {
+  position: relative;
+}
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.nav-link-underline:hover::after,
+.nav-link-underline[data-active="true"]::after {
+  width: 100%;
+}
+
+/* ── Footer link underline draw-in ── */
+.footer-link {
+  position: relative;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* ── CTA button arrow ── */
+.btn-arrow .btn-arrow-icon {
+  transition: transform 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.btn-arrow:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ── Project card image treatments ── */
+.project-image-wrap img {
+  transition: transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1), filter 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  filter: grayscale(20%) sepia(5%);
+}
+.project-image-wrap:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%) sepia(0%);
+}
+.project-image-overlay {
+  opacity: 0;
+  transition: opacity 350ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.project-image-wrap:hover .project-image-overlay,
+.project-image-wrap:focus-within .project-image-overlay {
+  opacity: 1;
+}
+
+/* ── Service card accent border ── */
+.service-card-hover {
+  border-left: 3px solid transparent;
+  transition: border-color 250ms cubic-bezier(0.25, 0.1, 0.25, 1), padding-left 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.service-card-hover:hover {
+  border-left-color: var(--color-accent);
+  padding-left: 1.5rem;
+}
+
+/* ── Award card hover ── */
+.award-card-hover {
+  transition: transform 200ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.award-card-hover:hover {
+  transform: translateX(4px);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-wireframe-line {
+    stroke-dashoffset: 0;
+  }
+  .hero-wireframe-node {
+    opacity: 1;
+  }
+  .project-image-wrap img {
+    filter: none;
+  }
+  .hero-layer,
+  .hero-wireframe-sublayer {
+    transform: none !important;
+    transition: none !important;
+  }
+  .hero-line-reveal {
+    transform: none;
+  }
+  .hero-idle-float-slow,
+  .hero-idle-float-medium,
+  .hero-idle-float-fast {
+    animation: none;
+  }
+  .hero-scroll-cue-line {
+    transform: none;
+    opacity: 0.6;
+  }
+  .hero-cta-primary:hover,
+  .hero-cta-secondary:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

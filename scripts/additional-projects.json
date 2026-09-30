@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "lower-basin-barracks",
+    "title": "Massachusetts State Police Lower Basin Barracks",
+    "location": "Boston, MA",
+    "category": "Public & Civic",
+    "description": "Structural engineering for the modernization and expansion of the State Police housed in the historic 1908 Lower Basin Gatehouse. The renovation respects the historic nature of the original building while providing new community and state police space.",
+    "imageAlt": "Lower Basin Barracks \u2014 historic gatehouse with modern police facility addition at dusk",
+    "naming_confidence": "Confirmed",
+    "featured": false,
+    "imageSrc": "/images/projects/lower-basin-barracks.jpg",
+    "size_kb": 140.9
+  },
+  {
+    "id": "30c410_f130f2784c174955a4b50e5556d4236a",
+    "slug": "walden-mass-timber-interior",
+    "title": "Walden Mass Timber Interior",
+    "location": "Massachusetts",
+    "category": "Mass Timber",
+    "description": "Mass timber structural engineering showcasing wood's natural beauty as a strong, low-carbon alternative to concrete and steel.",
+    "imageAlt": "Walden mass timber interior \u2014 exposed wood structure",
+    "naming_confidence": "Confirmed",
+    "featured": false,
+    "imageSrc": "/images/projects/walden-mass-timber-interior.jpg",
+    "size_kb": 163.0
+  },
+  {
+    "id": "30c410_93851f5254bd4b2a96de2b9636bae6a4",
+    "slug": "mass-timber-structure",
+    "title": "Mass Timber Structure",
+    "location": "Massachusetts",
+    "category": "Mass Timber",
+    "description": "Structural engineering for a mass timber building demonstrating durable, low-carbon construction.",
+    "imageAlt": "Mass timber structure \u2014 engineered wood framing",
+    "naming_confidence": "Category-based",
+    "featured": false,
+    "imageSrc": "/images/projects/mass-timber-structure.jpg",
+    "size_kb": 198.8
+  },
+  {
+    "id": "30c410_577802b1e9b6421b81f50ff3b1fd3a2f",
+    "slug": "moore-square-park",
+    "title": "Moore Square Park",
+    "location": "Raleigh, NC",
+    "category": "Mass Timber",
+    "description": "Mass timber structural engineering for Moore Square Park \u2014 wood construction in a civic landscape setting.",
+    "imageAlt": "Moore Square Park \u2014 mass timber civic structure",
+    "naming_confidence": "Confirmed",
+    "featured": false,
+    "imageSrc": "/images/projects/moore-square-park.jpg",
+    "size_kb": 291.4
+  }
+]

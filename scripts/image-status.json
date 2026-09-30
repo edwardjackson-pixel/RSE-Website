@@ -1,0 +1,262 @@
+[
+  {
+    "project_final": "Essex Technical High School",
+    "category": "K-12 Schools",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/essex-technical-high-school.jpg",
+    "size_kb": 207.5
+  },
+  {
+    "project_final": "The Winsor School",
+    "category": "K-12 Schools",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/the-winsor-school.jpg",
+    "size_kb": 248.2
+  },
+  {
+    "project_final": "Fall River Justice Center",
+    "category": "Public & Civic",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/fall-river-justice-center.jpg",
+    "size_kb": 254.9
+  },
+  {
+    "project_final": "Walden Pond Visitor Center",
+    "category": "Landscapes & Parks",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/walden-pond-visitor-center.jpg",
+    "size_kb": 297.7
+  },
+  {
+    "project_final": "UMass Dartmouth Balsam",
+    "category": "Higher Education",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/umass-dartmouth-balsam.jpg",
+    "size_kb": 151.2
+  },
+  {
+    "project_final": "UMass Basketball Champions Center",
+    "category": "Athletic Facilities",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/umass-basketball-champions-center.jpg",
+    "size_kb": 199.2
+  },
+  {
+    "project_final": "Pan Peninsula",
+    "category": "Residential",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Confirmed",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/pan-peninsula.jpg",
+    "size_kb": 86.7
+  },
+  {
+    "project_final": "Multi-Unit Residential Building",
+    "category": "Residential",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Category-based",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/multi-unit-residential-building.jpg",
+    "size_kb": 187.2
+  },
+  {
+    "project_final": "Gladys E. Kelly Public Library",
+    "category": "Libraries",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Inferred",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/gladys-e-kelly-public-library.jpg",
+    "size_kb": 211.1
+  },
+  {
+    "project_final": "Performing Arts Center",
+    "category": "Museum & Performing Arts",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Category-based",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/performing-arts-center.jpg",
+    "size_kb": 241.4
+  },
+  {
+    "project_final": "Brooklyn Waterfront Pavilion",
+    "category": "Landscapes & Parks",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Inferred",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/brooklyn-waterfront-pavilion.jpg",
+    "size_kb": 155.7
+  },
+  {
+    "project_final": "Historic Campus Expansion",
+    "category": "Restoration & Renovation",
+    "real_photo_found": "Yes",
+    "original_source": "Real photo from rseassociates.com",
+    "naming_confidence": "Inferred",
+    "action": "Real image applied",
+    "imageSrc": "/images/projects/historic-campus-expansion.jpg",
+    "size_kb": 201.5
+  },
+  {
+    "project_final": "Fall River Justice Center",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Lowell Justice Center",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with Fall River Justice Center (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Historic Campus Expansion",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Fitchburg City Hall Renovations",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with Historic Campus Expansion (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "UMass Dartmouth Balsam",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: UMass Isenberg School of Management",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with UMass Dartmouth Balsam (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Gladys E. Kelly Public Library",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Boston Public Library, Roxbury Branch",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with library project using real interior photo (inferred)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Walden Pond Visitor Center",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Franklin Regional Transit Center",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with Walden Pond Visitor Center (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "UMass Basketball Champions Center",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Wentworth Institute of Technology",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with UMass Basketball Champions Center (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Gladys E. Kelly Public Library",
+    "category": "\u2014",
+    "real_photo_found": "Yes",
+    "original_source": "AI-generated placeholder: Gladys E. Kelly Public Library",
+    "naming_confidence": "N/A",
+    "action": "Real image applied (library interior photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Historic Campus Expansion",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Massachusetts State Police Lower Basin Barracks",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 no matching photo on old site; portfolio uses other real projects",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "UMass Dartmouth Balsam",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Greenfield Community College Center",
+    "naming_confidence": "N/A",
+    "action": "Removed AI placeholder \u2014 replaced with UMass Dartmouth Balsam (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Pan Peninsula",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Harbor Point Residential Tower",
+    "naming_confidence": "N/A",
+    "action": "Removed AI-invented project \u2014 replaced with Pan Peninsula (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "\u2014",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Mass Timber Office Building",
+    "naming_confidence": "N/A",
+    "action": "Removed AI-invented project \u2014 no matching real photo on old site",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "UMass Basketball Champions Center",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: University Athletic Center",
+    "naming_confidence": "N/A",
+    "action": "Removed AI-invented project \u2014 replaced with UMass Basketball Champions Center (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Multi-Unit Residential Building",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Downtown Mixed-Use Development",
+    "naming_confidence": "N/A",
+    "action": "Removed AI-invented project \u2014 replaced with Multi-Unit Residential Building (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  },
+  {
+    "project_final": "Brooklyn Waterfront Pavilion",
+    "category": "\u2014",
+    "real_photo_found": "No",
+    "original_source": "AI-generated placeholder: Waterfront Park Pavilion",
+    "naming_confidence": "N/A",
+    "action": "Removed AI-invented project \u2014 replaced with Brooklyn Waterfront Pavilion (real photo from old site)",
+    "imageSrc": "\u2014",
+    "size_kb": "\u2014"
+  }
+]
