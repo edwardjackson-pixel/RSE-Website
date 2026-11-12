@@ -6,7 +6,6 @@ export const SITE_URL = "https://www.rseassociates.com";
 export const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" },
-  { label: "How We Build", href: "/how-we-build" },
   { label: "About", href: "/about" },
   { label: "Awards", href: "/awards" },
   { label: "Careers", href: "/careers" },
@@ -60,7 +59,7 @@ export const SERVICES = [
     title: "New Construction",
     slug: "new-construction",
     description:
-      "Full structural design for ground-up buildings — from schematic concept through construction administration. We work alongside architects from day one to develop structural systems that serve the design, not fight it.",
+      "Full structural design services for ground-up buildings, from concept through construction administration. We work alongside architects from day one to develop structural systems that serve the design, not fight it.",
   },
   {
     title: "Adaptive Reuse & Renovation",
@@ -78,19 +77,19 @@ export const SERVICES = [
     title: "Structural Investigation",
     slug: "structural-investigation",
     description:
-      "Detailed field investigation and analysis of existing structures. We document conditions, identify deficiencies, and provide clear recommendations — whether for renovation planning, damage assessment, or due diligence.",
+      "Detailed field investigation and analysis of existing structures. We document conditions, identify deficiencies, and provide clear recommendations for renovation planning, damage assessment, or due diligence.",
   },
   {
     title: "Structural Peer Reviews",
     slug: "peer-reviews",
     description:
-      "Independent review of structural designs by other engineers. We provide thorough, objective analysis for building officials, owners, and institutions that require a second opinion on complex or high-profile projects.",
+      "Independent review of structural designs by other engineers. We provide thorough, objective analysis for building officials, owners and institutions that require a third-party review of complex or high-profile projects.",
   },
   {
     title: "Design Competition Support",
     slug: "design-competitions",
     description:
-      "Structural engineering support for architecture competitions and design proposals. We help architects develop compelling, buildable structural concepts on tight timelines — ensuring the vision is grounded in real engineering.",
+      "Structural engineering support for architecture competitions and design proposals. We help architects develop compelling, buildable structural concepts on tight timelines ensuring the vision is grounded in real engineering.",
   },
 ] as const;
 
@@ -123,13 +122,13 @@ export const FEATURED_PROJECTS = [
     imageSrc: "/images/projects/umass-dartmouth-balsam.jpg",
   },
   {
-    title: "UMass Basketball Champions Center",
+    title: "University of Massachusetts Amherst Isenberg School of Management",
     location: "Amherst, MA",
-    category: "Athletic Facilities",
+    category: "Higher Education",
     description:
-      "The John Francis Kennedy Champions Center for UMass Basketball — a dedicated training and athletics facility.",
-    imageAlt: "UMass Basketball Champions Center — athletics facility with glass facade",
-    imageSrc: "/images/projects/umass-basketball-champions-center.jpg",
+      "Structural Engineering for a new 40,000 net sf building and renovations to the existing 47,700 sf building. This $45.8M project includes bridges between the buildings and a 5,000 sf atrium space featuring 3-story, sloped \"fins\" covering custom steel trusses.",
+    imageAlt: "University of Massachusetts Amherst Isenberg School of Management — higher education building in Amherst, MA",
+    imageSrc: "/images/projects/university-of-massachusetts-amherst-isenberg-school-of-management-amherst-ma.jpg",
   },
   {
     title: "Walden Pond Visitor Center",
@@ -459,13 +458,13 @@ export const ALL_PROJECTS = [
     imageSrc: "/images/projects/university-of-south-dakota-beacom.jpg",
   },
   {
-    title: "University of Massachusetts Amherst Isenberg School of Management Amherst, MA",
-    location: "Massachusetts",
-    category: "Higher Education",
+    title: "UMass Basketball Champions Center",
+    location: "Amherst, MA",
+    category: "Athletic Facilities",
     description:
-      "Structural Engineering for a new 40,000 net sf building and renovations to the existing 47,700 sf building. This $45.8M project includes bridges between the buildings and a 5,000 sf atrium space featuring 3-story, sloped \"fins\" covering custom steel trusses.",
-    imageAlt: "University of Massachusetts Amherst Isenberg School of Management Amherst, MA — higher education project",
-    imageSrc: "/images/projects/university-of-massachusetts-amherst-isenberg-school-of-management-amherst-ma.jpg",
+      "The John Francis Kennedy Champions Center for UMass Basketball — a dedicated training and athletics facility.",
+    imageAlt: "UMass Basketball Champions Center — athletics facility with glass facade",
+    imageSrc: "/images/projects/umass-basketball-champions-center.jpg",
   },
   {
     title: "University of Massachusetts Amherst- P3 Student Housing Amherst, MA",

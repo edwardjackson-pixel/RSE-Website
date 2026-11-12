@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import ProjectCard from "@/components/ProjectCard";
 import SectionLabel from "@/components/SectionLabel";
 import CTASection from "@/components/CTASection";
@@ -9,23 +10,50 @@ import BlueprintGrid from "@/components/svg/BlueprintGrid";
 import { ALL_PROJECTS, PROJECT_CATEGORIES } from "@/lib/constants";
 
 export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState<string>("All");
+  return (
+    <Suspense fallback={null}>
+      <ProjectsPageContent />
+    </Suspense>
+  );
+}
+
+function ProjectsPageContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const requestedCategory = searchParams.get("category");
+
+  const categoriesWithProjects = PROJECT_CATEGORIES.filter((cat) =>
+    ALL_PROJECTS.some((p) => p.category === cat)
+  );
+  const requestedIsKnown =
+    requestedCategory != null &&
+    (PROJECT_CATEGORIES as readonly string[]).includes(requestedCategory);
+  const availableCategories = [
+    "All",
+    ...categoriesWithProjects,
+    ...(requestedIsKnown &&
+    !categoriesWithProjects.includes(requestedCategory as (typeof PROJECT_CATEGORIES)[number])
+      ? [requestedCategory]
+      : []),
+  ];
+  const activeCategory = requestedIsKnown ? requestedCategory : "All";
 
   const filteredProjects =
     activeCategory === "All"
       ? ALL_PROJECTS
       : ALL_PROJECTS.filter((p) => p.category === activeCategory);
 
-  const availableCategories = [
-    "All",
-    ...PROJECT_CATEGORIES.filter((cat) =>
-      ALL_PROJECTS.some((p) => p.category === cat)
-    ),
-  ];
+  function selectCategory(category: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (category === "All") params.delete("category");
+    else params.set("category", category);
+    const query = params.toString();
+    router.push(query ? `/projects?${query}` : "/projects", { scroll: false });
+  }
 
   return (
     <>
-      <section className="relative bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section id="selected-work" className="relative bg-white pt-32 pb-20 lg:pt-40 lg:pb-28">
         <BlueprintGrid opacity={0.02} fadeDirection="center" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn>
@@ -46,7 +74,7 @@ export default function ProjectsPage() {
               {availableCategories.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => selectCategory(cat)}
                   role="tab"
                   aria-selected={activeCategory === cat}
                   className={`px-4 py-2 text-sm transition-colors duration-200 cursor-pointer ${

@@ -95,19 +95,6 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
-          <FadeIn>
-            <div className="mt-10 text-center">
-              <Link
-                href="/services"
-                className="btn-arrow inline-flex items-center gap-2 text-sm font-medium text-charcoal hover:text-accent transition-colors duration-200 cursor-pointer"
-              >
-                Learn more about our services
-                <svg className="btn-arrow-icon h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
 

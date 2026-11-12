@@ -6,6 +6,22 @@ import Link from "next/link";
 import Image from "next/image";
 import StructuralPattern from "@/components/svg/StructuralPattern";
 
+export type ProjectInfo = {
+  completionDate?: string;
+  size?: string;
+  architect?: string;
+  sustainability?: string;
+  awards?: string;
+};
+
+const PROJECT_INFO_FIELDS = [
+  { key: "completionDate", label: "Completion Date", optional: false },
+  { key: "size", label: "Size", optional: false },
+  { key: "architect", label: "Architect", optional: false },
+  { key: "sustainability", label: "Sustainability", optional: true },
+  { key: "awards", label: "Awards", optional: true },
+] as const satisfies readonly { key: keyof ProjectInfo; label: string; optional: boolean }[];
+
 interface ProjectCardProps {
   title: string;
   location: string;
@@ -14,6 +30,26 @@ interface ProjectCardProps {
   imageAlt: string;
   imageSrc?: string;
   href?: string;
+  info?: ProjectInfo;
+}
+
+function ProjectFacts({ info }: { info?: ProjectInfo }) {
+  const facts = PROJECT_INFO_FIELDS.flatMap(({ key, label, optional }) => {
+    const value = info?.[key]?.trim() ?? "";
+    if (optional && !value) return [];
+    return [{ label, value }];
+  });
+
+  return (
+    <dl className="mt-3 space-y-2">
+      {facts.map((fact) => (
+        <div key={fact.label}>
+          <dt className="text-sm font-semibold text-charcoal">{fact.label}</dt>
+          <dd className="min-h-5 text-sm font-normal text-stone-600">{fact.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
 }
 
 function ProjectImage({
@@ -84,6 +120,7 @@ export default function ProjectCard({
   imageAlt,
   imageSrc,
   href,
+  info,
 }: ProjectCardProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -169,6 +206,7 @@ export default function ProjectCard({
                 </h2>
                 <p className="mt-2 text-sm text-stone-500">{location}</p>
                 <p className="mt-4 text-stone-600 leading-relaxed">{description}</p>
+                <ProjectFacts info={info} />
               </div>
             </div>
           </div>,

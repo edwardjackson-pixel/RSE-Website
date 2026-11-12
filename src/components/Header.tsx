@@ -10,8 +10,6 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isHome = pathname === "/";
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     onScroll();
@@ -19,14 +17,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isTransparent = isHome && !scrolled && !mobileOpen;
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isTransparent
-          ? "bg-transparent border-b border-white/10"
-          : "bg-white/95 backdrop-blur-sm border-b border-stone-200"
+      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-200 transition-shadow duration-300 ${
+        scrolled ? "shadow-sm" : ""
       }`}
     >
       <nav
@@ -34,7 +28,7 @@ export default function Header() {
         aria-label="Primary navigation"
       >
         <Link href="/" className="flex shrink-0 items-center" onClick={() => setMobileOpen(false)}>
-          <SiteLogo height={44} tone={isTransparent ? "light" : "dark"} priority />
+          <SiteLogo priority />
         </Link>
 
         {/* Desktop nav */}
@@ -46,13 +40,9 @@ export default function Header() {
                 <Link
                   href={link.href}
                   className={`nav-link-underline text-sm tracking-wide transition-colors duration-200 ${
-                    isTransparent
-                      ? isActive
-                        ? "text-white font-medium"
-                        : "text-stone-300 hover:text-white"
-                      : isActive
-                        ? "text-charcoal font-medium"
-                        : "text-stone-500 hover:text-charcoal"
+                    isActive
+                      ? "text-charcoal font-medium"
+                      : "text-stone-500 hover:text-charcoal"
                   }`}
                   data-active={isActive}
                 >
@@ -66,9 +56,7 @@ export default function Header() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className={`lg:hidden p-2 -mr-2 cursor-pointer transition-colors duration-200 ${
-            isTransparent ? "text-stone-300 hover:text-white" : "text-stone-600 hover:text-charcoal"
-          }`}
+          className="lg:hidden p-2 -mr-2 cursor-pointer text-stone-600 hover:text-charcoal transition-colors duration-200"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}

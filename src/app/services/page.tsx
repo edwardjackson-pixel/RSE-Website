@@ -65,73 +65,14 @@ export default function ServicesPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {PROJECT_CATEGORIES.map((category, i) => (
               <FadeIn key={category} delay={i * 50}>
-                <div className="bg-white border border-stone-200 px-5 py-4 text-sm font-medium text-charcoal hover:border-stone-400 transition-colors duration-200">
+                <Link
+                  href={`/projects?category=${encodeURIComponent(category)}#selected-work`}
+                  className="block bg-white border border-stone-200 px-5 py-4 text-sm font-medium text-charcoal hover:border-stone-400 hover:text-accent transition-colors duration-200"
+                >
                   {category}
-                </div>
+                </Link>
               </FadeIn>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <SectionDivider variant="beam" />
-
-      {/* ──── Approach ──── */}
-      <section className="bg-white py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <FadeIn direction="left">
-              <div>
-                <SectionLabel>Our Process</SectionLabel>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-charcoal tracking-tight">
-                  How we work
-                </h2>
-                <p className="mt-4 text-stone-600 leading-relaxed text-lg">
-                  We join the design team early and stay involved through construction. This is not a hand-off model — we maintain continuity from concept through completion.
-                </p>
-                <Link
-                  href="/how-we-build"
-                  className="btn-arrow group mt-6 inline-flex items-center gap-2 text-sm font-medium tracking-wide text-accent hover:text-accent-light transition-colors duration-200"
-                >
-                  See how we build, layer by layer
-                  <svg className="btn-arrow-icon h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
-              </div>
-            </FadeIn>
-            <div className="space-y-0">
-              {[
-                {
-                  phase: "Schematic Design",
-                  text: "We work with the architect to develop the structural concept, evaluate systems, and establish the basic geometry of the structure. Early involvement avoids costly changes later.",
-                },
-                {
-                  phase: "Design Development",
-                  text: "We refine the structural system, size members, coordinate with MEP, and resolve constructability questions. Detailed coordination happens here.",
-                },
-                {
-                  phase: "Construction Documents",
-                  text: "Complete structural drawings and specifications for permitting and construction. Clear, well-coordinated documents that contractors can build from.",
-                },
-                {
-                  phase: "Construction Administration",
-                  text: "Shop drawing review, site visits, and field observation. We stay with the project to ensure the structure is built as designed.",
-                },
-              ].map((item, i) => (
-                <FadeIn key={item.phase} delay={i * 100}>
-                  <div className="border-t border-stone-200 py-6 flex gap-6 items-start">
-                    <span className="text-xs font-mono text-stone-400 mt-1 shrink-0 w-8">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <h3 className="font-heading text-base font-semibold text-charcoal">{item.phase}</h3>
-                      <p className="mt-2 text-sm text-stone-600 leading-relaxed">{item.text}</p>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
           </div>
         </div>
       </section>

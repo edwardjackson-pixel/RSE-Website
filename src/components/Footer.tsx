@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block">
-              <SiteLogo height={40} tone="light" />
+            <Link href="/" className="inline-block bg-white px-2 py-1.5">
+              <SiteLogo />
             </Link>
             <p className="mt-4 text-sm leading-relaxed max-w-xs">
               Structural engineering for architecture that has to perform beautifully. Offices in Boston, New York, and Los Angeles.
